@@ -4,15 +4,8 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/uluumbch/weight-conversions/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/uluumbch/weight-conversions/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/uluumbch/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/uluumbch/weight-conversions)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+A simple PHP package for convert a weight.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/weight-conversions.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/weight-conversions)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
@@ -25,8 +18,13 @@ composer require uluumbch/weight-conversions
 ## Usage
 
 ```php
-$skeleton = new Uluumbch\WeightConversions();
-echo $skeleton->echoPhrase('Hello, Uluumbch!');
+$convert = new Uluumbch\WeightConversions();
+echo $convert->poundsToKilograms(1); // 0.45359237
+echo $convert->kilogramsToPounds(1); // 2.204622621
+echo $convert->gramsToOunces(1); // 0.0352739615
+echo $convert->ouncesToGrams(1); // 28.349523125
+echo $convert->stonesToPounds(1); // 14
+echo $convert->poundsToStones(14); // 1
 ```
 
 ## Testing
